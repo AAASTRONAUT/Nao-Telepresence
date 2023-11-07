@@ -10,14 +10,14 @@ def speech_2_txt():
         os.rename(origin + q, target + q)
         #filepath = os.path.join(target, q)
         #start_time = time.time()
-        openai.api_key = "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"
+        openai.api_key = "ENTER API KEY HERE"
         audio_file = open(target + q , "rb")
         transcript = openai.Audio.transcribe("whisper-1", audio_file)
         #print (time.time() - start_time)
         return transcript.text
 
 def chatgpt(text):
-    openai.api_key = "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"
+    openai.api_key = "ENTER API KEY HERE"
 
     messages = [
         {
