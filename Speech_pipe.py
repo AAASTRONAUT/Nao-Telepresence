@@ -1,8 +1,8 @@
 import os
 import openai
 def speech_2_txt():
-    origin = '/Users/akshayavenugopal1/3rd_Year/IOT/Project/uploads/'
-    target = '/Users/akshayavenugopal1/3rd_Year/IOT/Project/old_files/'
+    origin = '/source/of/audio'
+    target = '/dest/for/audio'
     files = os.listdir(origin)
     #language = 'en'
 
