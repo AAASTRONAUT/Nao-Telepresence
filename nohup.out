@@ -1,0 +1,34 @@
+/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/paramiko/transport.py:33: CryptographyDeprecationWarning: Python 2 is no longer supported by the Python core team. Support for it is now deprecated in cryptography, and will be removed in the next release.
+  from cryptography.hazmat.backends import default_backend
+[W] 1700313717.565643 259 qi.path.sdklayout: No Application was created, trying to deduce paths
+[I] 1700313717.568511 259 qimessaging.session: Session listener created on tcp://0.0.0.0:0
+[I] 1700313717.568950 259 qimessaging.transportserver: TransportServer will listen on: tcp://192.168.64.1:56929
+[I] 1700313717.568967 259 qimessaging.transportserver: TransportServer will listen on: tcp://172.17.22.73:56929
+[I] 1700313717.568978 259 qimessaging.transportserver: TransportServer will listen on: tcp://127.0.0.1:56929
+/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/paramiko/transport.py:33: CryptographyDeprecationWarning: Python 2 is no longer supported by the Python core team. Support for it is now deprecated in cryptography, and will be removed in the next release.
+  from cryptography.hazmat.backends import default_backend
+[W] 1700313792.610440 259 qi.path.sdklayout: No Application was created, trying to deduce paths
+[I] 1700313792.613265 259 qimessaging.session: Session listener created on tcp://0.0.0.0:0
+[I] 1700313792.613725 259 qimessaging.transportserver: TransportServer will listen on: tcp://192.168.64.1:56938
+[I] 1700313792.613743 259 qimessaging.transportserver: TransportServer will listen on: tcp://172.17.22.73:56938
+[I] 1700313792.613754 259 qimessaging.transportserver: TransportServer will listen on: tcp://127.0.0.1:56938
+start recording...
+record over
+start recording...
+[E] 1700313801.542766 5635 python: Traceback (most recent call last):
+  File "touchreact_record.py", line 41, in onTouched
+    Recording_thread()
+  File "/Users/akshayavenugopal1/3rd_Year/IOT/Project/speech_pipe/recording.py", line 24, in Recording_thread
+    record.startMicrophonesRecording(record_path, 'wav', 16000, (0,0,1,0))
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pynaoqi/lib/python2.7/site-packages/naoqi.py", line 194, in __call__
+    return self.__wrapped__.method_missing(self.__method__, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pynaoqi/lib/python2.7/site-packages/naoqi.py", line 264, in method_missing
+    raise e
+RuntimeError: 	ALAudioRecorder::startMicrophonesRecording
+		ALAudioRecorder::startMicrophonesRecording
+	Already recording
+start recording...
+record over
+[I] 1700313846.255354 8707 qi.Application: Sending the stop command...
+[W] 1700313846.266352 4867 qitype.signal: disconnect: No subscription found for SignalLink 41.
+[W] 1700313846.266829 15623 qitype.signal: disconnect: No subscription found for SignalLink 0.
