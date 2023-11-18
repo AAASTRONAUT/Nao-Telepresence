@@ -1,8 +1,8 @@
 import os
 import openai
 def speech_2_txt():
-    origin = '/Users/akshayavenugopal1/3rd_Year/IOT/Project/speech_pipe/uploads/'
-    target = '/Users/akshayavenugopal1/3rd_Year/IOT/Project/speech_pipe/old_files/'
+    origin = 'source'
+    target = 'destination'
     files = os.listdir(origin)
     #language = 'en'
 
@@ -10,14 +10,14 @@ def speech_2_txt():
         os.rename(origin + q, target + q)
         #filepath = os.path.join(target, q)
         #start_time = time.time()
-        openai.api_key = "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"
+        openai.api_key = "Enter_API_Key"
         audio_file = open(target + q , "rb")
         transcript = openai.Audio.transcribe("whisper-1", audio_file)
         #print (time.time() - start_time)
         return transcript.text
 
 def chatgpt(text):
-    openai.api_key = "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"
+    openai.api_key = "Enter_API_Key"
 
     messages = [
         {
