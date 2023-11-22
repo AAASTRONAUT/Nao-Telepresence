@@ -1,8 +1,8 @@
 import os
 import openai
 def speech_2_txt():
-    origin = '/source/of/audio'
-    target = '/dest/for/audio'
+    origin = 'source'
+    target = 'destination'
     files = os.listdir(origin)
     #language = 'en'
 
@@ -10,20 +10,20 @@ def speech_2_txt():
         os.rename(origin + q, target + q)
         #filepath = os.path.join(target, q)
         #start_time = time.time()
-        openai.api_key = "ENTER API KEY HERE"
+        openai.api_key = "Enter_API_Key"
         audio_file = open(target + q , "rb")
         transcript = openai.Audio.transcribe("whisper-1", audio_file)
         #print (time.time() - start_time)
         return transcript.text
 
 def chatgpt(text):
-    openai.api_key = "ENTER API KEY HERE"
+    openai.api_key = "Enter_API_Key"
 
     messages = [
         {
             "role": "system",
             #if you want to change the content you can, it's just a way to let ChatGPT know what we're using it for.
-            "content": "You are a Nao robot of BITS Pilani IOT Lab. You are built to talk to a user like a real person."
+            "content": "You are a Nao robot of BITS Pilani IOT Lab. You are built to talk to a user like a real person. You answer questions as two sentences"
         }
     ]
 
@@ -38,7 +38,7 @@ def chatgpt(text):
         print(f"{reply}")
         messages.append({"role": "assistant", "content": reply})
         #specify path of file to write chatgpt reply to
-        file = open('/Users/akshayavenugopal1/3rd_Year/IOT/Project/ans.txt','w')
+        file = open('/Users/akshayavenugopal1/3rd_Year/IOT/Project/speech_pipe/ans.txt','w')
         file.write(reply)
         file.close()
     return reply
