@@ -16,28 +16,31 @@ def main(session):
     This example uses the setAngles method and setStiffnesses method
     in order to control joints.
     """
-    prev = 0
     # Get the service ALMotion.
     motionProxy  = ALProxy("ALMotion","172.20.4.100" , 9559)
     postureProxy = ALProxy("ALRobotPosture", "172.20.4.100", 9559)
+    tts    = ALProxy("ALTextToSpeech", "172.20.4.100", 9559)
+    tts.say("I'm standing up")
+    postureProxy.goToPosture("StandInit", 1.0)
+
     motionProxy.wakeUp()
     while(True):
-        with open('lshoulder.json', 'r') as json_file:
+        with open('angles.json', 'r') as json_file:
             data = json.load(json_file)
-        if(data["left_shoulder"] != None):
 
-            motion_service  = session.service("ALMotion")
+        motion_service  = session.service("ALMotion")
 
-            motion_service.setStiffnesses("LArm", 1.0)
+        motion_service.setStiffnesses("LArm", 1.0)
+        motion_service.setStiffnesses("RArm", 1.0)
+        motion_service.setStiffnesses("LLeg", 1.0)
+        motion_service.setStiffnesses("RLeg", 1.0)
+        fractionMaxSpeed = 0.1
 
-            # Simple command for the HeadYaw joint at 10% max speed
-            names            = "LElbowRoll"
-            angles           = -(data["left_shoulder"])
-            fractionMaxSpeed = 0.1
-            motion_service.setAngles(names,angles,fractionMaxSpeed)
-            prev = data["left_shoulder"]
-            time.sleep(1)
-            # motion_service.setStiffnesses("LArm", 0.0)
+        names = list(data.keys())
+        angles = list(data.values())
+
+        motion_service.setAngles(names,angles,fractionMaxSpeed)
+        time.sleep(1)
 
 
 if __name__ == "__main__":
