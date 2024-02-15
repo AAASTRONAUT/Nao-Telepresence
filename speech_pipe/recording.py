@@ -21,7 +21,21 @@ def Recording_thread(robotIP = "192.168.11.160"):
 	record_path = '/home/nao/record.wav'
  
 	record.startMicrophonesRecording(record_path, 'wav', 16000, (0,0,1,0))
-	time.sleep(2)
+	start_time = time.time()
+	last_audio_time = time.time()
+	
+	while True:
+        # Check if 2 seconds have passed since the last audio
+		if time.time() - last_audio_time > 2:
+			print("Pause detected. Stopping recording.")
+			break
+
+		audio_data = audio.getFrontMicEnergy()
+		if audio_data > 0: #test to set the value	
+			last_audio_time = time.time()
+
+		# time.sleep(0.1)
+        
 	record.stopMicrophonesRecording()
  
 	print ('record over')
