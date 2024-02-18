@@ -19,7 +19,8 @@ def Recording_thread(robotIP = "192.168.11.160"):
 	saySomething(tts, "How can I help you today?")
 	print('start recording...')
 	record_path = '/home/nao/record.wav'
- 
+
+	record.stopMicrophonesRecording()
 	record.startMicrophonesRecording(record_path, 'wav', 16000, (0,0,1,0))
 	start_time = time.time()
 	last_audio_time = time.time()
