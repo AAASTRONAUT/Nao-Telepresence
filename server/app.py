@@ -32,7 +32,7 @@ def index():
 
 @socketio.on('getfile')
 def handle_message(message):
-     with open('/app/test.txt', 'r') as file:
+     with open('/app/speak_now.txt', 'r') as file:
         file_content = file.read()
         emit('file_response', file_content)
 
