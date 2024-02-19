@@ -9,9 +9,9 @@ app.config['SECRET_KEY'] = 'secret!'
 socketio = SocketIO(app)
 
 # Path to your .txt file for displaying content
-TXT_FILE_PATH = '/home/iotlabgpupc1/Desktop/Naotelepresense/server/test.txt'
+TXT_FILE_PATH = '/app/test.txt'
 # Path where you want to save incoming messages
-SPEAK_NOW_FILE_PATH = '/home/iotlabgpupc1/Desktop/Naotelepresense/server/speak_now.txt'
+SPEAK_NOW_FILE_PATH = '/app/speak_now.txt'
 
 def read_txt_file():
     try:
@@ -30,6 +30,12 @@ def emit_txt_content():
 def index():
     return render_template('frontend.html')
 
+@socketio.on('getfile')
+def handle_message(message):
+     with open('/app/test.txt', 'r') as file:
+        file_content = file.read()
+        emit('file_response', file_content)
+
 @socketio.on('send message')
 def handle_message(message):
     print('Received message:', message)
@@ -40,8 +46,6 @@ def handle_message(message):
     emit('message received', {'status': 'Message received'})
 
 if __name__ == '__main__':
-    if not os.path.exists('/home/iotlabgpupc1/Desktop/Naotelepresense/server'):
-        os.makedirs('/home/iotlabgpupc1/Desktop/Naotelepresense/server')
     # Start the thread that emits txt file updates
     threading.Thread(target=emit_txt_content, daemon=True).start()
     socketio.run(app, debug=True)
