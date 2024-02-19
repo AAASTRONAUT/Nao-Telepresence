@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Real-Time Text Display</title>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>
+    <script type="text/javascript" charset="utf-8">
+        var socket = io.connect('http://' + document.domain + ':' + location.port);
+
+        socket.on('file update', function(data) {
+            document.getElementById('txtDisplay').textContent = data.content;
+        });
+
+        socket.on('message received', function(data) {
+            console.log(data.status);
+            // Optionally clear the input field or notify the user
+        });
+
+        function sendText() {
+            var input = document.getElementById('userInput').value;
+            socket.emit('send message', input); // Use emit with custom event for sending message
+            document.getElementById('userInput').value = ''; // Optionally clear the input field after sending
+        }
+    </script>
+</head>
+<body>
+<div id="txtDisplay">Waiting for updates...</div>
+<input type="text" id="userInput" />
+<button onclick="sendText()">Send</button>
+</body>
+</html>
