@@ -42,6 +42,15 @@ def handle_send_message(message):
     # Emit back an acknowledgment or update
     emit('message received', {'status': 'Message received'})
 
+@socketio.on('update message')
+def handle_update_message(message):
+    print('Received message:', message)
+    # Save the message to speak_now.txt
+    with open(TXT_FILE_PATH, 'w') as file:
+        file.write(message)
+    # Emit back an acknowledgment or update
+    emit('txt_message_updated', {'status': 'Message received'})
+
 if __name__ == '__main__':
     socketio.run(app, debug=True)
 

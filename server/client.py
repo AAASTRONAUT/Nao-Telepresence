@@ -24,6 +24,9 @@ import socketio
 import schedule
 import time
 
+
+TXT_FILE_PATH = '/home/govind/Downloads/Nao-Telepresence/server/test.txt'  # Update this path as necessary
+
 # create a Socket.IO client
 sio = socketio.Client()
 
@@ -32,9 +35,18 @@ sio = socketio.Client()
 def file_response(data):
     print('File content received:', data)
 
+@sio.event
+def txt_message_updated(data):
+    print('File content updated on server')
+
 # Function to request the file content
 def request_file_content():
     sio.emit('getfile', '')  # Assuming the server expects an empty string for the file request
+
+def update_file_content():
+    with open(TXT_FILE_PATH, 'r') as file:
+        file_content = file.read()
+        sio.emit('update message', file_content)  # Assuming the server expects an empty string for the file request
 
 # Connect to the server
 sio.connect('ws://134.209.146.184:5000', wait_timeout=10)
