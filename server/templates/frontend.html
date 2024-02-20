@@ -3,28 +3,104 @@
 <head>
     <title>Real-Time Text Display</title>
     <script src="//cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>
-    <script type="text/javascript" charset="utf-8">
-        var socket = io.connect('http://' + document.domain + ':' + location.port);
-
-        socket.on('file update', function(data) {
-            document.getElementById('txtDisplay').textContent = data.content;
-        });
-
-        socket.on('message received', function(data) {
-            console.log(data.status);
-            // Optionally clear the input field or notify the user
-        });
-
-        function sendText() {
-            var input = document.getElementById('userInput').value;
-            socket.emit('send message', input); // Use emit with custom event for sending message
-            document.getElementById('userInput').value = ''; // Optionally clear the input field after sending
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            margin: 0;
         }
+        #txtDisplay {
+            background-color: #fff;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+            width: 80%;
+            max-width: 600px;
+            overflow-wrap: break-word;
+        }
+        #userInput {
+            padding: 10px;
+            width: 80%;
+            max-width: 580px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            margin-bottom: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+ <script>
+    $(document).ready(function(){
+        let lastContent = ""; // Keep track of the last fetched content
+    
+        function fetchText() {
+            $.getJSON('/get-text', function(data) {
+                const currentContent = data.content.trim();
+                if (currentContent !== lastContent) {
+                    // Identify new messages from "Nao" by comparing current and last content
+                    const newMessages = currentContent.replace(lastContent, "").trim().split('\n');
+                    newMessages.forEach(msg => {
+                        if (msg !== "") {
+                            displayMessage("Nao", msg); // Display new messages as from "Nao"
+                        }
+                    });
+                    lastContent = currentContent;
+                }
+            });
+        }
+        setInterval(fetchText, 1000); // Fetch text every 1000 milliseconds
+    
+        var socket = io.connect('http://' + document.domain + ':' + location.port);
+    
+        // Function to display messages
+        function displayMessage(sender, message) {
+            const messageElement = `<div><strong>${sender}</strong>: ${message}</div>`;
+            $('#txtDisplay').append(messageElement);
+        }
+    
+        // Function to send and display a message from Vinay
+        function sendText() {
+            var input = $('#userInput').val().trim();
+            if (input !== '') {
+                displayMessage("Vinay", input); // Display the message immediately as from "Vinay"
+                socket.emit('send message', input);
+                $('#userInput').val(''); // Clear the input field after sending
+            }
+        }
+    
+        // Send message when the Enter key is pressed
+        $('#userInput').keypress(function(e) {
+            if(e.which == 13) { // Enter key = 13
+                sendText();
+                e.preventDefault(); // Prevent default action (form submission)
+            }
+        });
+    
+        window.sendText = sendText; // Make sendText available for button onclick
+    });
     </script>
+    
 </head>
 <body>
-<div id="txtDisplay">Waiting for updates...</div>
-<input type="text" id="userInput" />
+<div id="txtDisplay">Loading text content...</div>
+<input type="text" id="userInput" placeholder="Type your message here..." />
 <button onclick="sendText()">Send</button>
 </body>
 </html>
+
