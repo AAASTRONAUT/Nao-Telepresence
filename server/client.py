@@ -25,7 +25,7 @@ import schedule
 import time
 
 
-TXT_FILE_PATH = '/home/govind/Downloads/Nao-Telepresence/server/test.txt'  # Update this path as necessary
+TXT_FILE_PATH = '/Users/shivansh/Desktop/Naotelepresense/server/test.txt'  # Update this path as necessary
 
 # create a Socket.IO client
 sio = socketio.Client()

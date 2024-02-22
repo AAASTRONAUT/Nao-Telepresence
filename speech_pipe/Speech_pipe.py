@@ -4,19 +4,19 @@ import google.generativeai as genai
 import requests
 
 def speech_2_txt():
-    origin = '/home/iotlabgpupc1/Desktop/Naotelepresense/speech_pipe/uploads/'
-    target = '/home/iotlabgpupc1/Desktop/Naotelepresense/speech_pipe/old_files/'
+    origin = '/Users/shivansh/Desktop/Naotelepresense/speech_pipe/uploads/'
+    target = '/Users/shivansh/Desktop/Naotelepresense/speech_pipe/old_files/'
     files = os.listdir(origin)
     #language = 'en'
 
     for q in files:
         os.rename(origin + q, target + q)
 
-        openai.api_key = "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"
+        openai.api_key = "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"
         audio_file = open(target + q , "rb")
         transcript = openai.Audio.transcribe("whisper-1", audio_file, language = "en")
-        # print("tuli request: ",transcript)
         #print (time.time() - start_time)
+        print(transcript.text)
         return transcript.text
 
 def model(text):
@@ -43,34 +43,35 @@ def model(text):
         
         
         #using gemini
-        # genai.configure(api_key="AIzaSyDqQssTjV5PZDdkc7Sdn0prwXsoMbP8O68")
+        genai.configure(api_key="AIzaSyDqQssTjV5PZDdkc7Sdn0prwXsoMbP8O68")
         
-        # model = genai.GenerativeModel('gemini-pro')
-        # chat = model.start_chat(history=[])
+        model = genai.GenerativeModel('gemini-pro')
+        chat = model.start_chat(history=[])
 
-        # response = chat.send_message(
-        #     "You are an advanced humanoid robot from the BITS Pilani IoT Lab, equipped with a human-like figure, two arms, two legs, and five fingers on each hand. Your feet lack fingers but have pressure sensors. Your forehead houses a camera, and your chest contains four sonars and a power button in the center. Your purpose is to converse with users like a real person, answering questions in only two sentences, and retaining information from previous queries. If asked to perform a physical task, respond that you don't know it, suggesting that the inquirer might teach you. Give me answer in 2 lines only")
-        # # print(response.text)
-        # reply = chat.send_message(message)
+        response = chat.send_message(
+            "You are an advanced humanoid robot from the BITS Pilani IoT Lab named NAO, equipped with a human-like figure, two arms, two legs, and five fingers on each hand. Your feet lack fingers but have pressure sensors. Your forehead houses a camera, and your chest contains four sonars and a power button in the center. Your purpose is to converse with users like a real person, answering questions in only two sentences, and retaining information from previous queries. If asked to perform a physical task, respond that you don't know it, suggesting that the inquirer might teach you. Give me answer in 2 lines only. You are not suposed to say that you lack the pysical capability of doing physical things, Instead ylu are a humanoid robot which can also perform physical tasks and whenever someone asks you to do something physical you are supposed to walk him throught the steps of doing so.")
+        # print(response.text)
+        reply = chat.send_message(message)
+        print(message)
+        print(reply.text)
+        
+        # API_TOKEN = "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"
+        # API_URL = "https://api-inference.huggingface.co/models/ProfHuseyin/bert-english-fine-tuning-question-answering"
+        # headers = {"Authorization": f"Bearer {API_TOKEN}"}
+
+        # def query(payload):
+        #     response = requests.post(API_URL, headers=headers, json=payload)
+        #     return response.json()
+            
+        # reply = query({
+        #     "inputs": {
+        #         "question": message,
+        #         "context": "You are an advanced humanoid robot from the BITS Pilani IoT Lab, equipped with a human-like figure, two arms, two legs, and five fingers on each hand. Your feet lack fingers but have pressure sensors. Your forehead houses a camera, and your chest contains four sonars and a power button in the center. Your purpose is to converse with users like a real person, answering questions in only two sentences, and retaining information from previous queries. If asked to perform a physical task, respond that you don't know it, suggesting that the inquirer might teach you. Give me answer in 2 lines only"
+        #     },
+        # })
         # print(reply)
         
-        API_TOKEN = "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"
-        API_URL = "https://api-inference.huggingface.co/models/ProfHuseyin/bert-english-fine-tuning-question-answering"
-        headers = {"Authorization": f"Bearer {API_TOKEN}"}
-
-        def query(payload):
-            response = requests.post(API_URL, headers=headers, json=payload)
-            return response.json()
-            
-        reply = query({
-            "inputs": {
-                "question": message,
-                "context": "You are an advanced humanoid robot from the BITS Pilani IoT Lab, equipped with a human-like figure, two arms, two legs, and five fingers on each hand. Your feet lack fingers but have pressure sensors. Your forehead houses a camera, and your chest contains four sonars and a power button in the center. Your purpose is to converse with users like a real person, answering questions in only two sentences, and retaining information from previous queries. If asked to perform a physical task, respond that you don't know it, suggesting that the inquirer might teach you. Give me answer in 2 lines only"
-            },
-        })
-        print(reply)
-        
-        file = open('/home/iotlabgpupc1/Desktop/Naotelepresense/speech_pipe/ans.txt','w')
+        file = open('/Users/shivansh/Desktop/Naotelepresense/speech_pipe/ans.txt','w')
         file.write(reply.text)
         file.close()
 

@@ -2,6 +2,7 @@ import qi
 import functools
 import sys
 from recording import Recording_thread
+from naoqi import ALProxy
 
 robotIP = str(sys.argv[1])
 # robotIP = "192.168.8.160"
@@ -55,4 +56,5 @@ if __name__ == "__main__":
                "Please check your script arguments. Run with -h option for help.")
         sys.exit(1)
     react_to_touch = ReactToTouch(app)
+    
     app.run()

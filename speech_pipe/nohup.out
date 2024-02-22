@@ -3330,3 +3330,405 @@ record over
 [I] 1707922554.136068 202136 qi.Application: Sending the stop command...
 [W] 1707922554.140095 202123 qitype.signal: disconnect: No subscription found for SignalLink 14.
 [W] 1707922554.140246 206222 qitype.signal: disconnect: No subscription found for SignalLink 0.
+/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/paramiko/transport.py:33: CryptographyDeprecationWarning: Python 2 is no longer supported by the Python core team. Support for it is now deprecated in cryptography, and will be removed in the next release.
+  from cryptography.hazmat.backends import default_backend
+recording
+[I] 1708426984.922860 8963 qimessaging.session: Session listener created on tcp://0.0.0.0:0
+[I] 1708426984.923699 8963 qimessaging.transportserver: TransportServer will listen on: tcp://172.17.50.85:51890
+[I] 1708426984.923746 8963 qimessaging.transportserver: TransportServer will listen on: tcp://127.0.0.1:51890
+start recording...
+Pause detected. Stopping recording.
+record over
+[I] 1708427083.816086 10243 qi.Application: Sending the stop command...
+[W] 1708427083.831253 15623 qitype.signal: disconnect: No subscription found for SignalLink 0.
+[W] 1708427083.831312 15623 qitype.signal: disconnect: No subscription found for SignalLink 20.
+[W] 1708427083.831434 5123 qitype.signal: disconnect: No subscription found for SignalLink 14.
+/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/paramiko/transport.py:33: CryptographyDeprecationWarning: Python 2 is no longer supported by the Python core team. Support for it is now deprecated in cryptography, and will be removed in the next release.
+  from cryptography.hazmat.backends import default_backend
+recording
+[I] 1708427188.820247 10243 qimessaging.session: Session listener created on tcp://0.0.0.0:0
+[I] 1708427188.821607 10243 qimessaging.transportserver: TransportServer will listen on: tcp://172.17.50.85:51924
+[I] 1708427188.821652 10243 qimessaging.transportserver: TransportServer will listen on: tcp://127.0.0.1:51924
+start recording...
+Pause detected. Stopping recording.
+record over
+[I] 1708427552.026501 9475 qi.Application: Sending the stop command...
+[W] 1708427552.040940 11527 qitype.signal: disconnect: No subscription found for SignalLink 0.
+[W] 1708427552.041010 11527 qitype.signal: disconnect: No subscription found for SignalLink 20.
+[W] 1708427552.040977 6147 qitype.signal: disconnect: No subscription found for SignalLink 14.
+/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/paramiko/transport.py:33: CryptographyDeprecationWarning: Python 2 is no longer supported by the Python core team. Support for it is now deprecated in cryptography, and will be removed in the next release.
+  from cryptography.hazmat.backends import default_backend
+recording
+[I] 1708427996.549758 8195 qimessaging.session: Session listener created on tcp://0.0.0.0:0
+[I] 1708427996.550407 8195 qimessaging.transportserver: TransportServer will listen on: tcp://172.17.50.85:52027
+[I] 1708427996.550441 8195 qimessaging.transportserver: TransportServer will listen on: tcp://127.0.0.1:52027
+start recording...
+Pause detected. Stopping recording.
+record over
+[I] 1708428144.293001 8963 qi.Application: Sending the stop command...
+[W] 1708428144.316357 15111 qitype.signal: disconnect: No subscription found for SignalLink 0.
+[W] 1708428144.316435 15111 qitype.signal: disconnect: No subscription found for SignalLink 20.
+[W] 1708428144.316440 5023 qitype.signal: disconnect: No subscription found for SignalLink 14.
+/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/paramiko/transport.py:33: CryptographyDeprecationWarning: Python 2 is no longer supported by the Python core team. Support for it is now deprecated in cryptography, and will be removed in the next release.
+  from cryptography.hazmat.backends import default_backend
+Traceback (most recent call last):
+  File "touchreact_record.py", line 58, in <module>
+    tts = ALProxy("ALTextToSpeech", robotIP, 9559)
+NameError: name 'ALProxy' is not defined
+[W] 1708428586.886754 5123 qitype.signal: disconnect: No subscription found for SignalLink 14.
+[W] 1708428586.886940 9475 qitype.signal: disconnect: No subscription found for SignalLink 0.
+[W] 1708428586.886988 9475 qitype.signal: disconnect: No subscription found for SignalLink 20.
+/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/paramiko/transport.py:33: CryptographyDeprecationWarning: Python 2 is no longer supported by the Python core team. Support for it is now deprecated in cryptography, and will be removed in the next release.
+  from cryptography.hazmat.backends import default_backend
+Traceback (most recent call last):
+  File "touchreact_record.py", line 58, in <module>
+    tts = ALProxy("ALTextToSpeech", robotIP, 9559)
+NameError: name 'ALProxy' is not defined
+[W] 1708428597.049576 6403 qitype.signal: disconnect: No subscription found for SignalLink 14.
+[W] 1708428597.049759 9219 qitype.signal: disconnect: No subscription found for SignalLink 0.
+[W] 1708428597.049798 9219 qitype.signal: disconnect: No subscription found for SignalLink 20.
+/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/paramiko/transport.py:33: CryptographyDeprecationWarning: Python 2 is no longer supported by the Python core team. Support for it is now deprecated in cryptography, and will be removed in the next release.
+  from cryptography.hazmat.backends import default_backend
+Traceback (most recent call last):
+  File "touchreact_record.py", line 58, in <module>
+    tts = ALProxy("ALTextToSpeech", robotIP, 9559)
+NameError: name 'ALProxy' is not defined
+[W] 1708428621.577909 10499 qitype.signal: disconnect: No subscription found for SignalLink 14.
+[W] 1708428621.578039 10755 qitype.signal: disconnect: No subscription found for SignalLink 0.
+[W] 1708428621.578201 10755 qitype.signal: disconnect: No subscription found for SignalLink 20.
+/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/paramiko/transport.py:33: CryptographyDeprecationWarning: Python 2 is no longer supported by the Python core team. Support for it is now deprecated in cryptography, and will be removed in the next release.
+  from cryptography.hazmat.backends import default_backend
+[I] 1708428716.241554 259 qimessaging.session: Session listener created on tcp://0.0.0.0:0
+[I] 1708428716.242167 259 qimessaging.transportserver: TransportServer will listen on: tcp://172.17.50.85:52330
+[I] 1708428716.242183 259 qimessaging.transportserver: TransportServer will listen on: tcp://127.0.0.1:52330
+[I] 1708428716.242192 259 qimessaging.transportserver: TransportServer will listen on: tcp://127.0.2.2:52330
+[I] 1708428716.242200 259 qimessaging.transportserver: TransportServer will listen on: tcp://127.0.2.3:52330
+[I] 1708428716.242208 259 qimessaging.transportserver: TransportServer will listen on: tcp://172.16.0.2:52330
+/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/paramiko/transport.py:33: CryptographyDeprecationWarning: Python 2 is no longer supported by the Python core team. Support for it is now deprecated in cryptography, and will be removed in the next release.
+  from cryptography.hazmat.backends import default_backend
+recording
+[I] 1708428909.581015 8707 qimessaging.session: Session listener created on tcp://0.0.0.0:0
+[I] 1708428909.582174 8707 qimessaging.transportserver: TransportServer will listen on: tcp://172.17.50.85:52364
+[I] 1708428909.582211 8707 qimessaging.transportserver: TransportServer will listen on: tcp://127.0.0.1:52364
+[I] 1708428909.582231 8707 qimessaging.transportserver: TransportServer will listen on: tcp://127.0.2.2:52364
+[I] 1708428909.582250 8707 qimessaging.transportserver: TransportServer will listen on: tcp://127.0.2.3:52364
+[I] 1708428909.582268 8707 qimessaging.transportserver: TransportServer will listen on: tcp://172.16.0.2:52364
+start recording...
+Pause detected. Stopping recording.
+record over
+recording
+start recording...
+Pause detected. Stopping recording.
+record over
+recording
+start recording...
+Pause detected. Stopping recording.
+record over
+recording
+start recording...
+Pause detected. Stopping recording.
+record over
+recording
+[E] 1708429112.977249 8963 python: Traceback (most recent call last):
+  File "touchreact_record.py", line 42, in onTouched
+    Recording_thread(robotIP)
+  File "/Users/shivansh/Desktop/Naotelepresense/speech_pipe/recording.py", line 19, in Recording_thread
+    saySomething(tts, "How can I help you today?")
+  File "/Users/shivansh/Desktop/Naotelepresense/speech_pipe/recording.py", line 7, in saySomething
+    tts.say(sentence)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/pynaoqi/lib/python2.7/site-packages/naoqi.py", line 194, in __call__
+    return self.__wrapped__.method_missing(self.__method__, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/pynaoqi/lib/python2.7/site-packages/naoqi.py", line 264, in method_missing
+    raise e
+RuntimeError: 	ALTextToSpeech::say
+	Socket is not connected
+/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/paramiko/transport.py:33: CryptographyDeprecationWarning: Python 2 is no longer supported by the Python core team. Support for it is now deprecated in cryptography, and will be removed in the next release.
+  from cryptography.hazmat.backends import default_backend
+/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/paramiko/transport.py:33: CryptographyDeprecationWarning: Python 2 is no longer supported by the Python core team. Support for it is now deprecated in cryptography, and will be removed in the next release.
+  from cryptography.hazmat.backends import default_backend
+recording
+[I] 1708429172.573883 4867 qimessaging.session: Session listener created on tcp://0.0.0.0:0
+[I] 1708429172.574915 4867 qimessaging.transportserver: TransportServer will listen on: tcp://172.17.50.85:52473
+[I] 1708429172.574987 4867 qimessaging.transportserver: TransportServer will listen on: tcp://127.0.0.1:52473
+[I] 1708429172.575010 4867 qimessaging.transportserver: TransportServer will listen on: tcp://127.0.2.2:52473
+[I] 1708429172.575027 4867 qimessaging.transportserver: TransportServer will listen on: tcp://127.0.2.3:52473
+[I] 1708429172.575046 4867 qimessaging.transportserver: TransportServer will listen on: tcp://172.16.0.2:52473
+recording
+start recording...
+[W] 1708430460.511916 10499 qitype.signal: disconnect: No subscription found for SignalLink 40.
+Pause detected. Stopping recording.
+[W] 1708430460.512812 9731 qitype.signal: disconnect: No subscription found for SignalLink 14.
+[W] 1708430460.512948 9731 qitype.signal: disconnect: No subscription found for SignalLink 0.
+[W] 1708430460.512986 10499 qitype.signal: disconnect: No subscription found for SignalLink 0.
+recording
+[E] 1708430460.518342 10243 python: Traceback (most recent call last):
+  File "touchreact_record.py", line 34, in onTouched
+    self.touch.signal.disconnect(self.id)
+RuntimeError: Socket Disconnected
+[W] 1708430470.898679 5635 qitype.signal: disconnect: No subscription found for SignalLink 14.
+[W] 1708430470.900677 5635 qitype.signal: disconnect: No subscription found for SignalLink 0.
+[W] 1708430470.900725 5635 qitype.signal: disconnect: No subscription found for SignalLink 20.
+/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/paramiko/transport.py:33: CryptographyDeprecationWarning: Python 2 is no longer supported by the Python core team. Support for it is now deprecated in cryptography, and will be removed in the next release.
+  from cryptography.hazmat.backends import default_backend
+recording
+[I] 1708431290.299009 8451 qimessaging.session: Session listener created on tcp://0.0.0.0:0
+[I] 1708431290.299271 8451 qimessaging.transportserver: TransportServer will listen on: tcp://172.17.50.85:54197
+[I] 1708431290.299286 8451 qimessaging.transportserver: TransportServer will listen on: tcp://127.0.0.1:54197
+[I] 1708431290.299296 8451 qimessaging.transportserver: TransportServer will listen on: tcp://127.0.2.2:54197
+[I] 1708431290.299305 8451 qimessaging.transportserver: TransportServer will listen on: tcp://127.0.2.3:54197
+[I] 1708431290.299319 8451 qimessaging.transportserver: TransportServer will listen on: tcp://172.16.0.2:54197
+/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/paramiko/transport.py:33: CryptographyDeprecationWarning: Python 2 is no longer supported by the Python core team. Support for it is now deprecated in cryptography, and will be removed in the next release.
+  from cryptography.hazmat.backends import default_backend
+recording
+[I] 1708431354.656106 8707 qimessaging.session: Session listener created on tcp://0.0.0.0:0
+[I] 1708431354.657202 8707 qimessaging.transportserver: TransportServer will listen on: tcp://172.17.50.85:54292
+[I] 1708431354.657287 8707 qimessaging.transportserver: TransportServer will listen on: tcp://127.0.0.1:54292
+[I] 1708431354.657311 8707 qimessaging.transportserver: TransportServer will listen on: tcp://127.0.2.2:54292
+[I] 1708431354.657331 8707 qimessaging.transportserver: TransportServer will listen on: tcp://127.0.2.3:54292
+[I] 1708431354.657351 8707 qimessaging.transportserver: TransportServer will listen on: tcp://172.16.0.2:54292
+/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/paramiko/transport.py:33: CryptographyDeprecationWarning: Python 2 is no longer supported by the Python core team. Support for it is now deprecated in cryptography, and will be removed in the next release.
+  from cryptography.hazmat.backends import default_backend
+recording
+[I] 1708433573.148053 10243 qimessaging.session: Session listener created on tcp://0.0.0.0:0
+[I] 1708433573.148697 10243 qimessaging.transportserver: TransportServer will listen on: tcp://172.17.50.85:55510
+[I] 1708433573.148729 10243 qimessaging.transportserver: TransportServer will listen on: tcp://127.0.0.1:55510
+[I] 1708433573.148749 10243 qimessaging.transportserver: TransportServer will listen on: tcp://127.0.2.2:55510
+[I] 1708433573.148768 10243 qimessaging.transportserver: TransportServer will listen on: tcp://127.0.2.3:55510
+[I] 1708433573.148787 10243 qimessaging.transportserver: TransportServer will listen on: tcp://172.16.0.2:55510
+start recording...
+Pause detected. Stopping recording.
+record over
+recording
+start recording...
+Pause detected. Stopping recording.
+record over
+recording
+start recording...
+Pause detected. Stopping recording.
+record over
+recording
+start recording...
+Pause detected. Stopping recording.
+record over
+recording
+start recording...
+Pause detected. Stopping recording.
+record over
+recording
+start recording...
+Pause detected. Stopping recording.
+record over
+recording
+start recording...
+Pause detected. Stopping recording.
+record over
+recording
+start recording...
+Pause detected. Stopping recording.
+record over
+recording
+start recording...
+Pause detected. Stopping recording.
+record over
+recording
+start recording...
+Pause detected. Stopping recording.
+record over
+recording
+start recording...
+Pause detected. Stopping recording.
+record over
+recording
+start recording...
+Pause detected. Stopping recording.
+record over
+recording
+start recording...
+Pause detected. Stopping recording.
+record over
+recording
+start recording...
+Pause detected. Stopping recording.
+record over
+recording
+start recording...
+Pause detected. Stopping recording.
+record over
+recording
+start recording...
+Pause detected. Stopping recording.
+record over
+recording
+[E] 1708437963.006975 9731 python: Traceback (most recent call last):
+  File "touchreact_record.py", line 42, in onTouched
+    Recording_thread(robotIP)
+  File "/Users/shivansh/Desktop/Naotelepresense/speech_pipe/recording.py", line 19, in Recording_thread
+    saySomething(tts, "How can I help you today?")
+  File "/Users/shivansh/Desktop/Naotelepresense/speech_pipe/recording.py", line 7, in saySomething
+    tts.say(sentence)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/pynaoqi/lib/python2.7/site-packages/naoqi.py", line 194, in __call__
+    return self.__wrapped__.method_missing(self.__method__, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/pynaoqi/lib/python2.7/site-packages/naoqi.py", line 264, in method_missing
+    raise e
+RuntimeError: 	ALTextToSpeech::say
+	Socket Disconnected
+[W] 1708437963.536690 5727 qitype.signal: disconnect: No subscription found for SignalLink 40.
+[W] 1708437963.536791 4867 qitype.signal: disconnect: No subscription found for SignalLink 14.
+[W] 1708437963.537205 4867 qitype.signal: disconnect: No subscription found for SignalLink 0.
+[W] 1708437963.538681 5727 qitype.signal: disconnect: No subscription found for SignalLink 0.
+[W] 1708437963.563400 8195 qitype.signal: disconnect: No subscription found for SignalLink 14.
+[W] 1708437963.563817 8195 qitype.signal: disconnect: No subscription found for SignalLink 0.
+/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/paramiko/transport.py:33: CryptographyDeprecationWarning: Python 2 is no longer supported by the Python core team. Support for it is now deprecated in cryptography, and will be removed in the next release.
+  from cryptography.hazmat.backends import default_backend
+recording
+[I] 1708584787.265568 5123 qimessaging.session: Session listener created on tcp://0.0.0.0:0
+[I] 1708584787.266114 5123 qimessaging.transportserver: TransportServer will listen on: tcp://10.10.64.108:54418
+[I] 1708584787.266139 5123 qimessaging.transportserver: TransportServer will listen on: tcp://127.0.0.1:54418
+start recording...
+[I] 1708584800.170332 9219 qi.Application: Sending the stop command...
+[W] 1708584800.183404 5671 qitype.signal: disconnect: No subscription found for SignalLink 14.
+[W] 1708584800.183756 11015 qitype.signal: disconnect: No subscription found for SignalLink 0.
+/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/paramiko/transport.py:33: CryptographyDeprecationWarning: Python 2 is no longer supported by the Python core team. Support for it is now deprecated in cryptography, and will be removed in the next release.
+  from cryptography.hazmat.backends import default_backend
+recording
+[I] 1708584847.619928 10499 qimessaging.session: Session listener created on tcp://0.0.0.0:0
+[I] 1708584847.620929 10499 qimessaging.transportserver: TransportServer will listen on: tcp://10.10.64.108:54432
+[I] 1708584847.620980 10499 qimessaging.transportserver: TransportServer will listen on: tcp://127.0.0.1:54432
+start recording...
+Pause detected. Stopping recording.
+record over
+recording
+start recording...
+Pause detected. Stopping recording.
+record over
+recording
+start recording...
+Pause detected. Stopping recording.
+record over
+recording
+start recording...
+Pause detected. Stopping recording.
+record over
+recording
+start recording...
+Pause detected. Stopping recording.
+record over
+recording
+start recording...
+Pause detected. Stopping recording.
+record over
+[I] 1708585040.166616 9987 qi.Application: Sending the stop command...
+[W] 1708585040.175174 5379 qitype.signal: disconnect: No subscription found for SignalLink 14.
+[W] 1708585040.175443 15371 qitype.signal: disconnect: No subscription found for SignalLink 0.
+/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/paramiko/transport.py:33: CryptographyDeprecationWarning: Python 2 is no longer supported by the Python core team. Support for it is now deprecated in cryptography, and will be removed in the next release.
+  from cryptography.hazmat.backends import default_backend
+recording
+[I] 1708585045.254550 4395 qimessaging.session: Session listener created on tcp://0.0.0.0:0
+[I] 1708585045.255494 4395 qimessaging.transportserver: TransportServer will listen on: tcp://10.10.64.108:54533
+[I] 1708585045.255548 4395 qimessaging.transportserver: TransportServer will listen on: tcp://127.0.0.1:54533
+start recording...
+Pause detected. Stopping recording.
+record over
+recording
+start recording...
+Pause detected. Stopping recording.
+record over
+recording
+start recording...
+Pause detected. Stopping recording.
+record over
+recording
+start recording...
+Pause detected. Stopping recording.
+record over
+recording
+start recording...
+Pause detected. Stopping recording.
+record over
+recording
+start recording...
+Pause detected. Stopping recording.
+record over
+[I] 1708585339.484517 8707 qi.Application: Sending the stop command...
+[W] 1708585339.495618 10499 qitype.signal: disconnect: No subscription found for SignalLink 14.
+[W] 1708585339.496032 15367 qitype.signal: disconnect: No subscription found for SignalLink 0.
+/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/paramiko/transport.py:33: CryptographyDeprecationWarning: Python 2 is no longer supported by the Python core team. Support for it is now deprecated in cryptography, and will be removed in the next release.
+  from cryptography.hazmat.backends import default_backend
+recording
+[I] 1708585348.561733 8707 qimessaging.session: Session listener created on tcp://0.0.0.0:0
+[I] 1708585348.562940 8707 qimessaging.transportserver: TransportServer will listen on: tcp://10.10.64.108:54711
+[I] 1708585348.563019 8707 qimessaging.transportserver: TransportServer will listen on: tcp://127.0.0.1:54711
+start recording...
+Pause detected. Stopping recording.
+record over
+recording
+start recording...
+Pause detected. Stopping recording.
+record over
+recording
+start recording...
+Pause detected. Stopping recording.
+record over
+[I] 1708585517.958892 9219 qi.Application: Sending the stop command...
+[W] 1708585517.972899 8195 qitype.signal: disconnect: No subscription found for SignalLink 14.
+[W] 1708585517.973254 11023 qitype.signal: disconnect: No subscription found for SignalLink 0.
+/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/paramiko/transport.py:33: CryptographyDeprecationWarning: Python 2 is no longer supported by the Python core team. Support for it is now deprecated in cryptography, and will be removed in the next release.
+  from cryptography.hazmat.backends import default_backend
+recording
+[I] 1708585538.716333 4611 qimessaging.session: Session listener created on tcp://0.0.0.0:0
+[I] 1708585538.718641 4611 qimessaging.transportserver: TransportServer will listen on: tcp://10.10.64.108:54766
+[I] 1708585538.718720 4611 qimessaging.transportserver: TransportServer will listen on: tcp://127.0.0.1:54766
+start recording...
+Pause detected. Stopping recording.
+record over
+recording
+start recording...
+Pause detected. Stopping recording.
+record over
+recording
+start recording...
+Pause detected. Stopping recording.
+record over
+[I] 1708585620.458620 9219 qi.Application: Sending the stop command...
+[W] 1708585620.470093 8707 qitype.signal: disconnect: No subscription found for SignalLink 14.
+[W] 1708585620.470266 12299 qitype.signal: disconnect: No subscription found for SignalLink 0.
+/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/paramiko/transport.py:33: CryptographyDeprecationWarning: Python 2 is no longer supported by the Python core team. Support for it is now deprecated in cryptography, and will be removed in the next release.
+  from cryptography.hazmat.backends import default_backend
+recording
+[I] 1708586377.958270 8707 qimessaging.session: Session listener created on tcp://0.0.0.0:0
+[I] 1708586377.959189 8707 qimessaging.transportserver: TransportServer will listen on: tcp://10.10.64.108:54969
+[I] 1708586377.959268 8707 qimessaging.transportserver: TransportServer will listen on: tcp://127.0.0.1:54969
+start recording...
+Pause detected. Stopping recording.
+record over
+recording
+start recording...
+Pause detected. Stopping recording.
+record over
+recording
+start recording...
+Pause detected. Stopping recording.
+record over
+[I] 1708586487.875528 9475 qi.Application: Sending the stop command...
+[W] 1708586487.886657 5379 qitype.signal: disconnect: No subscription found for SignalLink 14.
+[W] 1708586487.886797 11279 qitype.signal: disconnect: No subscription found for SignalLink 0.
+/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/paramiko/transport.py:33: CryptographyDeprecationWarning: Python 2 is no longer supported by the Python core team. Support for it is now deprecated in cryptography, and will be removed in the next release.
+  from cryptography.hazmat.backends import default_backend
+recording
+[I] 1708586540.584608 4315 qimessaging.session: Session listener created on tcp://0.0.0.0:0
+[I] 1708586540.585177 4315 qimessaging.transportserver: TransportServer will listen on: tcp://10.10.64.108:55026
+[I] 1708586540.585209 4315 qimessaging.transportserver: TransportServer will listen on: tcp://127.0.0.1:55026
+start recording...
+Pause detected. Stopping recording.
+record over
+recording
+start recording...
+Pause detected. Stopping recording.
+record over
+recording
+start recording...
+Pause detected. Stopping recording.
+record over
+[I] 1708586629.997640 8707 qi.Application: Sending the stop command...
+[W] 1708586630.010515 10243 qitype.signal: disconnect: No subscription found for SignalLink 14.
+[W] 1708586630.010951 14599 qitype.signal: disconnect: No subscription found for SignalLink 0.

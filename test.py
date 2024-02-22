@@ -222,8 +222,8 @@ def standup():
     postureProxy.goToPosture("StandInit", 1.0)
 
 def sitdown():
-    postureProxy = ALProxy("ALRobotPosture", "192.168.179.160", 9559)
-    tts    = ALProxy("ALTextToSpeech", "192.168.179.160", 9559)
+    postureProxy = ALProxy("ALRobotPosture", "10.10.70.30", 9559)
+    tts    = ALProxy("ALTextToSpeech", "10.10.70.30", 9559)
     tts.say("I'm Done.")
     postureProxy.goToPosture("Sit", 1.0)
 
@@ -276,6 +276,6 @@ def lets_start():
 # Driver program 
 if __name__ == "__main__": 
     # standup()
-    standup()
-    # sitdown()
+    # standup()
+    sitdown()
     # kick()

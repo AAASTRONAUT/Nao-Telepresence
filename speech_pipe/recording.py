@@ -27,12 +27,12 @@ def Recording_thread(robotIP = "192.168.11.160"):
 	
 	while True:
         # Check if 2 seconds have passed since the last audio
-		if time.time() - last_audio_time > 2:
+		if time.time() - last_audio_time > 1.5:
 			print("Pause detected. Stopping recording.")
 			break
 
 		audio_data = audio.getFrontMicEnergy()
-		if audio_data > 0: #test to set the value	
+		if audio_data > 300: #test to set the value	
 			last_audio_time = time.time()
 
 		# time.sleep(0.1)
@@ -45,9 +45,11 @@ def Recording_thread(robotIP = "192.168.11.160"):
 	ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
 	ssh.connect(robotIP, username="nao", password="nao")
 	sftp = ssh.open_sftp()
-	sftp.get('/home/nao/record.wav', '/home/iotlabgpupc1/Desktop/Naotelepresense/speech_pipe/uploads/record.wav')
+	sftp.get('/home/nao/record.wav', '/Users/shivansh/Desktop/Naotelepresense/speech_pipe/uploads/record.wav')
 	sftp.close()
 	ssh.close()
+	tts = ALProxy("ALTextToSpeech", robotIP, 9559)
+	tts.say("Hmmm!! let me think! I am still learning, so it takes time for me to think")
 
 
 

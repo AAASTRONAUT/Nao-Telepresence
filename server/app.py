@@ -8,8 +8,8 @@ app = Flask(__name__)
 app.config['SECRET_KEY'] = 'secret!'
 socketio = SocketIO(app)
 
-TXT_FILE_PATH = '/home/govind/Downloads/Nao-Telepresence/server/test.txt'  # Update this path as necessary
-SPEAK_NOW_FILE_PATH = '/home/govind/Downloads/Nao-Telepresence/server/speak_now.txt'
+TXT_FILE_PATH = '/Users/shivansh/Desktop/Naotelepresense/server/test.txt'  # Update this path as necessary
+SPEAK_NOW_FILE_PATH = '/Users/shivansh/Desktop/Naotelepresense/server/speak_now.txt'
 
 def read_txt_file():
     try:
@@ -41,15 +41,6 @@ def handle_send_message(message):
         file.write(message + '\n')
     # Emit back an acknowledgment or update
     emit('message received', {'status': 'Message received'})
-
-@socketio.on('update message')
-def handle_update_message(message):
-    print('Received message:', message)
-    # Save the message to speak_now.txt
-    with open(TXT_FILE_PATH, 'w') as file:
-        file.write(message)
-    # Emit back an acknowledgment or update
-    emit('txt_message_updated', {'status': 'Message received'})
 
 if __name__ == '__main__':
     socketio.run(app, debug=True)
