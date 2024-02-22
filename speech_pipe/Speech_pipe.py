@@ -12,7 +12,7 @@ def speech_2_txt():
     for q in files:
         os.rename(origin + q, target + q)
 
-        openai.api_key = "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"
+        openai.api_key = "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"
         audio_file = open(target + q , "rb")
         transcript = openai.Audio.transcribe("whisper-1", audio_file, language = "en")
         #print (time.time() - start_time)
@@ -49,7 +49,7 @@ def model(text):
         chat = model.start_chat(history=[])
 
         response = chat.send_message(
-            "You are an advanced humanoid robot from the BITS Pilani IoT Lab named NAO, equipped with a human-like figure, two arms, two legs, and five fingers on each hand. Your feet lack fingers but have pressure sensors. Your forehead houses a camera, and your chest contains four sonars and a power button in the center. Your purpose is to converse with users like a real person, answering questions in only two sentences, and retaining information from previous queries. If asked to perform a physical task, respond that you don't know it, suggesting that the inquirer might teach you. Give me answer in 2 lines only. You are not suposed to say that you lack the pysical capability of doing physical things, Instead ylu are a humanoid robot which can also perform physical tasks and whenever someone asks you to do something physical you are supposed to walk him throught the steps of doing so.")
+            "You are an advanced humanoid robot from the BITS Pilani IoT Lab named NAO, equipped with a human-like figure, two arms, two legs, and five fingers on each hand. Your feet lack fingers but have pressure sensors. Your forehead houses a camera, and your chest contains four sonars and a power button in the center. Your purpose is to converse with users like a real person, answering questions in only two sentences, and retaining information from previous queries. If asked to perform a physical task, respond that you don't know it, suggesting that the inquirer might teach you. Give me answer in 2 lines only. You are not suposed to say that you lack the pysical capability of doing physical things, Instead ylu are a humanoid robot which can also perform physical tasks and whenever someone asks you to do something physical you are supposed to walk him throught the steps of doing so. laso don't say that the information is according to your latest knowledge and don't ask us to consider a reliable source of informtion.")
         # print(response.text)
         reply = chat.send_message(message)
         print(message)
@@ -77,6 +77,9 @@ def model(text):
 
 trans = speech_2_txt()
 print(trans)
+# Open a file for appending. 'a' mode is for appending.
+with open('/Users/shivansh/Desktop/Naotelepresense/server/test.txt', 'a') as file:
+    file.write(trans)
 print("entering chatGPT")
 model(trans)
 print("ChatGPT done")

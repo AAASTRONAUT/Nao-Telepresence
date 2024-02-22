@@ -4,6 +4,7 @@ import time
 import socket
 import almath
 from naoqi import ALProxy
+import random
 
 def computePath(proxy, effector, frame):
     dx      = 0.05                 # translation axis X (meters)
@@ -38,8 +39,8 @@ def computePath(proxy, effector, frame):
     return path
 
 def dance():
-    motionProxy  = ALProxy("ALMotion", "172.20.30.94", 9559)
-    postureProxy = ALProxy("ALRobotPosture", "172.20.30.94", 9559)
+    motionProxy  = ALProxy("ALMotion", "10.10.70.30", 9559)
+    postureProxy = ALProxy("ALRobotPosture", "10.10.70.30", 9559)
     
     # end initialize proxy, begin go to Stand Init
 
@@ -48,7 +49,7 @@ def dance():
         
     # Send robot to Stand Init
     postureProxy.goToPosture("StandInit", 0.5)  
-    tts    = ALProxy("ALTextToSpeech", "172.20.30.94", 9559)
+    tts    = ALProxy("ALTextToSpeech", "10.10.70.30", 9559)
     tts.say("Goal!")
     # end go to Stand Init, begin define control point
     effector        = "Torso"
@@ -178,31 +179,31 @@ def kick():
     # Go to rest position
     # motionProxy.rest()
 def speak():
-    tts = ALProxy("ALTextToSpeech", "172.20.30.94", 9559)
+    tts = ALProxy("ALTextToSpeech", "10.10.70.30", 9559)
     tts.say("Bye Im going")
 
 def moveforward():
     motion = ALProxy("ALMotion", "192.168.179.160", 9559)
     motion.setStiffnesses("Body", 1.0)
-    tts    = ALProxy("ALTextToSpeech", "172.20.30.94", 9559)
+    tts    = ALProxy("ALTextToSpeech", "10.10.70.30", 9559)
     # motion.moveInit()
     motion.post.moveTo(0.60, 0, 0)
     tts.say("Moving Forward")
 
 
 def rotateleft():
-    motion = ALProxy("ALMotion", "172.20.30.94", 9559)
+    motion = ALProxy("ALMotion", "10.10.70.30", 9559)
     motion.setStiffnesses("Body", 1.0)
-    tts    = ALProxy("ALTextToSpeech", "172.20.30.94", 9559)
+    tts    = ALProxy("ALTextToSpeech", "10.10.70.30", 9559)
     motion.moveInit()
     motion.post.moveTo(0, 0,1.5)
     tts.say("Turning Left")
 
 
 def rotateright():
-    motion = ALProxy("ALMotion", "172.20.30.94", 9559)
+    motion = ALProxy("ALMotion", "10.10.70.30", 9559)
     motion.setStiffnesses("Body", 1.0)
-    tts    = ALProxy("ALTextToSpeech", "172.20.30.94", 9559)
+    tts    = ALProxy("ALTextToSpeech", "10.10.70.30", 9559)
     motion.moveInit()
     motion.post.moveTo(0, 0,-1.5)
     tts.say("Turning Right")
@@ -216,8 +217,8 @@ def movebackward():
     tts.say("Moving Backward")
 
 def standup():
-    postureProxy = ALProxy("ALRobotPosture", "172.20.30.134", 9559)
-    tts    = ALProxy("ALTextToSpeech", "172.20.30.134", 9559)
+    postureProxy = ALProxy("ALRobotPosture", "10.10.70.30", 9559)
+    tts    = ALProxy("ALTextToSpeech", "10.10.70.30", 9559)
     tts.say("I'm standing up")
     postureProxy.goToPosture("StandInit", 1.0)
 
@@ -229,8 +230,8 @@ def sitdown():
 
 '''
 def lie_down():
-    postureProxy = ALProxy("ALRobotPosture", "172.20.30.94", 9559)
-    tts    = ALProxy("ALTextToSpeech", "172.20.30.94", 9559)
+    postureProxy = ALProxy("ALRobotPosture", "10.10.70.30", 9559)
+    tts    = ALProxy("ALTextToSpeech", "10.10.70.30", 9559)
     tts.say("I'm lying down")
     postureProxy.goToPosture("LyingBelly", 1.0)
     postureProxy.goToPosture("StandInit", 1.0)
@@ -238,14 +239,14 @@ def lie_down():
 
 
 def dark_detect():
-    dark = ALProxy("ALDarknessDetection","172.20.30.94",9559)
+    dark = ALProxy("ALDarknessDetection","10.10.70.30",9559)
     print(dark.getDarknessThreshold())
 '''
 
 def lets_start():
     lastarg = -1
     serverSock = socket.socket(socket.AF_INET,socket.SOCK_DGRAM)
-    serverSock.bind(("172.20.30.94",9559))
+    serverSock.bind(("10.10.70.30",9559))
     while(1):
         data,addr = serverSock.recvfrom(1024)
         command = data.decode("utf-8");
@@ -275,7 +276,8 @@ def lets_start():
 
 # Driver program 
 if __name__ == "__main__": 
+    standup()
+    dance()
     # standup()
-    # standup()
-    sitdown()
+    # sitdown()
     # kick()

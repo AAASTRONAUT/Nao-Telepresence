@@ -2,6 +2,20 @@ from naoqi import ALProxy
 import time
 import paramiko
 import os
+import random
+
+uxwords = [
+    "Let me ponder that for a moment; I'm still absorbing information, so I need a little time to process.",
+    "I'm in the midst of learning, so give me a second to gather my thoughts.",
+    "Hmm, that's a good question. I'm still navigating through my learning journey, so I might take a bit to respond.",
+    "I'm piecing together the knowledge as we speak; patience is appreciated as I figure this out.",
+    "I'm still on my learning curve, so let's explore this together. Allow me a moment to think it through.",
+    "Interesting point! I'm continuously learning, so I need a minute to contemplate that.",
+    "I'm in the process of expanding my understanding, so let me take a moment to deliberate.",
+    "As I'm still evolving in my learning, I might need a little time to reflect on your query.",
+    "Bear with me; I'm assimilating new information every day, so I need some time to consider your question.",
+    "I'm keen to learn more, so let me carefully think about what you've asked. Just a moment."
+]
 
 def saySomething(tts, sentence):
 	tts.say(sentence)
@@ -49,7 +63,9 @@ def Recording_thread(robotIP = "192.168.11.160"):
 	sftp.close()
 	ssh.close()
 	tts = ALProxy("ALTextToSpeech", robotIP, 9559)
-	tts.say("Hmmm!! let me think! I am still learning, so it takes time for me to think")
+	line = uxwords[random.randint(0 , 9)]
+	print(line)
+	tts.say(line)
 
 
 
