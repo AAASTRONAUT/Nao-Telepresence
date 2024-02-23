@@ -3862,3 +3862,133 @@ record over
 Interesting point! I'm continuously learning, so I need a minute to contemplate that.
 [W] 1708601266.552233 8451 qitype.signal: disconnect: No subscription found for SignalLink 14.
 [W] 1708601266.553699 8451 qitype.signal: disconnect: No subscription found for SignalLink 0.
+/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/paramiko/transport.py:33: CryptographyDeprecationWarning: Python 2 is no longer supported by the Python core team. Support for it is now deprecated in cryptography, and will be removed in the next release.
+  from cryptography.hazmat.backends import default_backend
+recording
+[I] 1708611473.831847 6403 qimessaging.session: Session listener created on tcp://0.0.0.0:0
+[I] 1708611473.832383 6403 qimessaging.transportserver: TransportServer will listen on: tcp://10.10.64.108:64990
+[I] 1708611473.832409 6403 qimessaging.transportserver: TransportServer will listen on: tcp://127.0.0.1:64990
+start recording...
+Pause detected. Stopping recording.
+record over
+Interesting point! I'm continuously learning, so I need a minute to contemplate that.
+recording
+start recording...
+Pause detected. Stopping recording.
+record over
+Bear with me; I'm assimilating new information every day, so I need some time to consider your question.
+recording
+start recording...
+Pause detected. Stopping recording.
+record over
+Let me ponder that for a moment; I'm still absorbing information, so I need a little time to process.
+recording
+start recording...
+Pause detected. Stopping recording.
+record over
+I'm in the midst of learning, so give me a second to gather my thoughts.
+[W] 1708611650.612917 10499 qitype.signal: disconnect: No subscription found for SignalLink 40.
+[W] 1708611650.612918 10243 qitype.signal: disconnect: No subscription found for SignalLink 14.
+[W] 1708611650.614210 10243 qitype.signal: disconnect: No subscription found for SignalLink 18446744073709551615.
+[W] 1708611650.614266 10499 qitype.signal: disconnect: No subscription found for SignalLink 0.
+[W] 1708611650.617605 6815 qitype.signal: disconnect: No subscription found for SignalLink 18446744073709551615.
+[W] 1708611650.621433 259 qi.FutureSync: Error in future on destruction: 'Connect error: 60: Operation timed out' - continuing stack unwinding...
+recording
+[W] 1708611650.621847 8707 qi.eventloop: Error caught in eventloop(EventLoopNetwork).async: shutdown: Socket is not connected
+[W] 1708611650.621911 259 qi.FutureSync: Error in future on destruction: 'Connect error: 60: Operation timed out' - continuing stack unwinding...
+start recording...
+Pause detected. Stopping recording.
+record over
+recording
+start recording...
+Pause detected. Stopping recording.
+record over
+recording
+start recording...
+Pause detected. Stopping recording.
+record over
+recording
+start recording...
+Pause detected. Stopping recording.
+record over
+recording
+start recording...
+Pause detected. Stopping recording.
+record over
+recording
+start recording...
+Pause detected. Stopping recording.
+record over
+recording
+start recording...
+Pause detected. Stopping recording.
+record over
+recording
+start recording...
+Pause detected. Stopping recording.
+record over
+recording
+start recording...
+Pause detected. Stopping recording.
+record over
+recording
+[W] 1708611650.622892 4007 qitype.signal: disconnect: No subscription found for SignalLink 14.
+[W] 1708611650.623031 4007 qitype.signal: disconnect: No subscription found for SignalLink 0.
+[W] 1708611650.622894 9987 qitype.signal: disconnect: No subscription found for SignalLink 40.
+[W] 1708611650.623737 9987 qitype.signal: disconnect: No subscription found for SignalLink 0.
+[W] 1708611650.624295 10243 qitype.signal: disconnect: No subscription found for SignalLink 0.
+start recording...
+Pause detected. Stopping recording.
+record over
+[W] 1708611650.625588 8451 qitype.signal: disconnect: No subscription found for SignalLink 14.
+[W] 1708611650.625731 8451 qitype.signal: disconnect: No subscription found for SignalLink 0.
+[W] 1708611650.625909 10499 qitype.signal: disconnect: No subscription found for SignalLink 40.
+Traceback (most recent call last):
+  File "touchreact_record.py", line 58, in <module>
+    react_to_touch = ReactToTouch(app)
+  File "touchreact_record.py", line 18, in __init__
+    app.start()
+RuntimeError: Connect error: 60: Operation timed out
+[W] 1708611650.626554 10499 qitype.signal: disconnect: No subscription found for SignalLink 0.
+start recording...
+Pause detected. Stopping recording.
+record over
+recording
+start recording...
+Pause detected. Stopping recording.
+record over
+recording
+[W] 1708611650.626566 9987 qitype.signal: disconnect: No subscription found for SignalLink 40.
+Traceback (most recent call last):
+  File "touchreact_record.py", line 58, in <module>
+[W] 1708611650.627034 10243 qitype.signal: disconnect: No subscription found for SignalLink 14.
+    react_to_touch = ReactToTouch(app)
+  File "touchreact_record.py", line 18, in __init__
+    app.start()
+[W] 1708611650.627527 9987 qitype.signal: disconnect: No subscription found for SignalLink 0.
+RuntimeError: Connect error: 60: Operation timed out
+[W] 1708611650.629076 9475 qi.eventloop: Error caught in eventloop(EventLoopNetwork).async: shutdown: Socket is not connected
+[I] 1708611650.629125 4611 qimessaging.session: Session listener created on tcp://0.0.0.0:0
+[I] 1708611650.629623 4611 qimessaging.transportserver: TransportServer will listen on: tcp://10.10.64.108:65157
+[I] 1708611650.629645 4611 qimessaging.transportserver: TransportServer will listen on: tcp://127.0.0.1:65157
+[W] 1708611650.629868 10243 qitype.signal: disconnect: No subscription found for SignalLink 0.
+[W] 1708611650.629886 10243 qitype.signal: disconnect: No subscription found for SignalLink 20.
+[E] 1708611650.641267 8195 python: Traceback (most recent call last):
+  File "touchreact_record.py", line 34, in onTouched
+    self.touch.signal.disconnect(self.id)
+RuntimeError: Socket Disconnected
+[E] 1708611650.641269 8707 python: Traceback (most recent call last):
+  File "touchreact_record.py", line 44, in onTouched
+    self.id = self.touch.signal.connect(functools.partial(self.onTouched, "TouchChanged"))
+RuntimeError: Socket is not connected
+[E] 1708611650.646716 6183 python: Traceback (most recent call last):
+  File "touchreact_record.py", line 34, in onTouched
+    self.touch.signal.disconnect(self.id)
+RuntimeError: Socket Disconnected
+[W] 1708611655.636666 4611 qitype.signal: disconnect: No subscription found for SignalLink 18446744073709551615.
+start recording...
+Pause detected. Stopping recording.
+record over
+Interesting point! I'm continuously learning, so I need a minute to contemplate that.
+[W] 1708612015.861279 5727 qitype.signal: disconnect: No subscription found for SignalLink 14.
+[W] 1708612015.862846 5727 qitype.signal: disconnect: No subscription found for SignalLink 0.
