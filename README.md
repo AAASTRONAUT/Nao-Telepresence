@@ -2,7 +2,7 @@
 
 **1. How to run** 
 
-1. Make sure you have Naoqi(official package, can be installed form: <insert link>) setup and installed in your pc.
+1. Make sure you have Naoqi(official package, can be installed from [here](https://www.aldebaran.com/en/support/pepper-naoqi-2-9/downloads-softwares)) setup and installed in your pc.
 1. Configure the .bash\_profile file preset in your home directory.
 1. Make sure your NAO robot is connected to the same network as your pc.
 1. Then run the speech\_convert.sh file present in the speech\_pipe directory passing NAO’s ip address which can be accessed form pressing the button in it’s chest.
@@ -11,19 +11,18 @@
 
 
 
-|<p>1\. Naoqi</p><p>This python library is provided by <insert the name of the French company>, which provides various functions to control the various sensors and actuators in the robot. </p>|
+|<p>1\. Naoqi</p><p>This python library is provided by Aldebaran , which provides various functions to control the various sensors and actuators in the robot. </p>|
 | - |
 |<p>2\. Python version mismatch</p><p>Naoqi is configured for python2.7 but all the latest speech models are compatible with python3 which created a major hurdle which is solved by doing all the computationin python3 files and all the functions that involve direct interaction with the robot has to be defined in a separate python2.7 file. </p><p>python2.7 files: recording.py, touchreact\_record.py and speak\_nao.py</p><p>python3 files: Speech\_pipe.py</p>|
 
 3. Latency: 
 
 The current latency of the model is ~4 seconds. The latency depends on factors like internet speed, speech model and local processing capabilities of the user, out of  these three internet speed is a major factor which can increase or decrease the latency of the whose system by a factor of 2.
-
-various speech models were tested and out of which google’s gemini and Openai’s chatGPT 4 shows minimum latency.
+Various speech models were tested and out of which Google’s Gemini and Openai’s chatGPT 4 shows minimum latency.
 
 **3. Installing Naoqi(for unix based systems):** 
 
-1. The Naoqi package can be installed from <insert link>.
+1. The Naoqi package can be installed from [here](https://www.aldebaran.com/en/support/pepper-naoqi-2-9/downloads-softwares).
 1. After installation of the Naoqi package, rename the folder as “pynaoqi” include the below mentioned commands into your .bash\_profile file present in the home directory.
 
 export PYTHONPATH=${PHTHONPATH}:path/to/pynaoqi/lib/python2.7/site-packages export DYLD\_LIBRARY\_PATH=${DYLD\_LIBRARY\_PATH}:path/to/pynaoqi/lib export QI\_SDK\_PREFIX=path/to/pynaoqi
