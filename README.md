@@ -36,8 +36,6 @@
 
 <p>In addition to replicating a person’s movement, our project integrates a voice interaction feature, adding another layer of user engagement with the Nao robot.</p>
 
-<p><em>Figure: The potential of Nao Humanoid for better human-robot interaction</em></p>
-
 <h2 id="methodology">Methodology</h2>
 
 <h3>General Details</h3>
