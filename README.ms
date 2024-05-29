@@ -1,27 +1,5 @@
 # INTERNET OF THINGS
 
-
-
-## Group 3: Telepresence System using NAO humanoid
-
-
-
-### Submitted on: 27th November 2023
-
-
-
-**Team Members:**
-
-- Govind Tuli, ID No. 2021A3PS0130P
-
-- Akshaya Venugopal, ID No. 2021AAPS0022P
-
-- Shivansh Jain, ID No. 2021AAPS1634P
-
-- Simran Moorjani, ID No. 2021A8PS2697P
-
-
-
 ## Table of Contents
 
 
