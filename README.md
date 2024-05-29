@@ -1,5 +1,3 @@
-<h1>INTERNET OF THINGS</h1>
-
 <h2>Table of Contents</h2>
 
 <ol>
@@ -31,8 +29,6 @@
 <p>The intersection of robotics and human-computer interaction has paved the path for several advances in the field of telepresence technology in recent years. Telepresence denotes the ability to be present or to be represented in a remote location through the use of robots. A user can use such a technology for remote control of machinery or for apparent participation in distant events where it might be impossible to go for humans. Telepresence is an exciting field that has the potential to change the world...</p>
 
 <p>This project focuses on the integration of telepresence with the Nao humanoid robot developed by Softbank Robotics.</p>
-
-<p><em>Figure: Nao at the IoT Lab</em></p>
 
 <p>Developed by SoftBank Robotics, the Nao humanoid robot is 58 centimeters tall, and has several sensors, including cameras, microphones, and touch sensors, allowing for a holistic interaction with its surrounding environment. It has two 2D cameras to recognize shapes, objects, and people. It also has 7 touch sensors located on the head, hands, and feet, sonars, and an inertial unit to perceive its environment and locate itself in space. 4 directional microphones and speakers are also present to interact with...</p>
 
